@@ -12,7 +12,7 @@
 /build
 
 #Application secrets
-secrect.json
+secrets.json
 
 # misc
 .DS_Store

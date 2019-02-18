@@ -10,9 +10,9 @@ custom:
 provider:
   name: aws
   runtime: nodejs6.10
-  stage: dev
-  profile: personal
-  region: ap-southeast-1
+  stage: production
+  profile: default
+  region: us-east-1
   environment:
     STRIPE_SECRET_KEY: ${self:custom.secrets.stripeSecretKey} # Stripe secret API key
 
