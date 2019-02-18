@@ -12,7 +12,7 @@
       "runtime": "nodejs6.10",
       "profile": "personal",
       "environment": {
-        "STRIPE_SECRET_KEY": "stripeSecretKey"
+        "STRIPE_SECRET_KEY": "sk_test_xZTyRdP2ScwNnOfxfMaQOluV "
       },
       "versionFunctions": true,
       "remoteFunctionData": null,
@@ -110,7 +110,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverless-stripe-backend/dev/1550526818790-2019-02-18T21:53:38.790Z/serverless-stripe-backend.zip"
+                "S3Key": "serverless/serverless-stripe-backend/dev/1550527249787-2019-02-18T22:00:49.787Z/serverless-stripe-backend.zip"
               },
               "FunctionName": "serverless-stripe-backend-dev-createCharge",
               "Handler": "functions/createCharge.handler",
@@ -125,7 +125,7 @@
               "Timeout": 6,
               "Environment": {
                 "Variables": {
-                  "STRIPE_SECRET_KEY": "stripeSecretKey"
+                  "STRIPE_SECRET_KEY": "sk_test_xZTyRdP2ScwNnOfxfMaQOluV "
                 }
               }
             },
@@ -134,14 +134,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "CreateChargeLambdaVersionSDN5wR92AXLFogJXGCm4DNfSIpX3QCOPGJWAoLC3ZvQ": {
+          "CreateChargeLambdaVersion1UkZFBhxESAoKM24oCzInGiDKocjmnubaPXlAQSYMY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateChargeLambdaFunction"
               },
-              "CodeSha256": "mZtwycX/Y3ccLsMXedwvzyhIX9dsYNelGTVWDP2TCKI="
+              "CodeSha256": "GtZLhMCeYVHKcl4geIYBuJtYExgNYE3060lZaCkS+Z0="
             }
           },
           "ApiGatewayRestApi": {
@@ -260,7 +260,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1550526819298": {
+          "ApiGatewayDeployment1550527250262": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -330,7 +330,7 @@
           "CreateChargeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateChargeLambdaVersionSDN5wR92AXLFogJXGCm4DNfSIpX3QCOPGJWAoLC3ZvQ"
+              "Ref": "CreateChargeLambdaVersion1UkZFBhxESAoKM24oCzInGiDKocjmnubaPXlAQSYMY"
             }
           },
           "ServiceEndpoint": {
@@ -372,7 +372,11 @@
       },
       "vpc": {}
     },
-    "custom": {},
+    "custom": {
+      "secrets": {
+        "stripeSecretKey": "sk_test_xZTyRdP2ScwNnOfxfMaQOluV "
+      }
+    },
     "pluginsData": {},
     "functions": {
       "createCharge": {
@@ -417,7 +421,7 @@
     "artifact": "/Users/TZENG/Desktop/Programming/productOne/.serverless/serverless-stripe-backend.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/serverless-stripe-backend/dev/1550526818790-2019-02-18T21:53:38.790Z",
+    "artifactDirectoryName": "serverless/serverless-stripe-backend/dev/1550527249787-2019-02-18T22:00:49.787Z",
     "artifact": "serverless-stripe-backend.zip"
   }
 }
