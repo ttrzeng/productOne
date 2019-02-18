@@ -4,7 +4,7 @@ service: serverless-stripe-backend
 
 # Configuration variables
 custom:
-  secrets: ${file(secrets.json)}
+  secrets: ${file(secret.json)}
 
 # The `provider` block defines where your service will be deployed
 provider:
