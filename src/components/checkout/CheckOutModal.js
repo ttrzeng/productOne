@@ -14,9 +14,6 @@ class CheckOutModal extends React.Component {
   async onToken(token) {
     const res = await fetch(config.stripe.apiUrl, {
       method: 'POST',
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
         token,
         charge: {

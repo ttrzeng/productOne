@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-stripe-backend/production/1550529686745-2019-02-18T22:41:26.745Z/serverless-stripe-backend.zip"
+          "S3Key": "serverless/serverless-stripe-backend/production/1550533443495-2019-02-18T23:44:03.495Z/serverless-stripe-backend.zip"
         },
         "FunctionName": "serverless-stripe-backend-production-createCharge",
         "Handler": "functions/createCharge.handler",
@@ -116,14 +116,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "CreateChargeLambdaVersionlO9HVLIwYuBenlft1uum4xiG5Xsnb7bj4na3Vdr3KM": {
+    "CreateChargeLambdaVersionraDtgAsaztHwv6IObX8TaHqjm1JLOxJKuHk74W40I4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateChargeLambdaFunction"
         },
-        "CodeSha256": "3q2JvzRvGe9r6IR+sR48qG/2Rn983DwvM6Le1XIkRys="
+        "CodeSha256": "/d5QZBN/5oSnEvDYdv5OdMGzMqsgBHAXSSxvOoeMNZs="
       }
     },
     "ApiGatewayRestApi": {
@@ -211,7 +211,7 @@
           "Ref": "ApiGatewayRestApi"
         },
         "ApiKeyRequired": false,
-        "AuthorizationType": "NONE",
+        "AuthorizationType": "AWS_IAM",
         "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
@@ -242,7 +242,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1550529687209": {
+    "ApiGatewayDeployment1550533443970": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -312,7 +312,7 @@
     "CreateChargeLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateChargeLambdaVersionlO9HVLIwYuBenlft1uum4xiG5Xsnb7bj4na3Vdr3KM"
+        "Ref": "CreateChargeLambdaVersionraDtgAsaztHwv6IObX8TaHqjm1JLOxJKuHk74W40I4"
       }
     },
     "ServiceEndpoint": {

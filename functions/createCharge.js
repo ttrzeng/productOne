@@ -10,14 +10,13 @@ module.exports.handler = (event, context, callback) => {
     amount,
     currency,
     description: 'productOne test charge',
-    source: token,
-  })
-    .then((charge) => { // Success response
+    source: token
+  }).then((charge) => { // Success response
       const response = {
         statusCode: 200,
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': true
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials": true
         },
         body: JSON.stringify({
           message: `Charge processed succesfully!`,
@@ -30,8 +29,8 @@ module.exports.handler = (event, context, callback) => {
       const response = {
         statusCode: 500,
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': true
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials": true
         },
         body: JSON.stringify({
           error: err.message,

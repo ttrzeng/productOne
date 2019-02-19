@@ -25,4 +25,5 @@ functions:
       - http:
           path: charges
           method: post
+          authorizer: aws_iam
           cors: true
