@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <CheckOutModal/>
+          <CheckOutModal amount={500}/>
         </header>
       </div>
     );

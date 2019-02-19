@@ -1,5 +1,10 @@
+# Welcome to serverless. Read the docs
+# https://serverless.com/framework/docs/
+
 # Serverless.yml is the configuration the CLI
 # uses to deploy your code to your provider of choice
+
+# The `service` block is the name of the service
 service: serverless-stripe-backend
 
 # Configuration variables
@@ -10,9 +15,9 @@ custom:
 provider:
   name: aws
   runtime: nodejs6.10
-  stage: production
-  profile: default
-  region: us-east-1
+  stage: dev
+  # profile: personal
+  # region: ap-southeast-1
   environment:
     STRIPE_SECRET_KEY: ${self:custom.secrets.stripeSecretKey} # Stripe secret API key
 
@@ -25,5 +30,4 @@ functions:
       - http:
           path: charges
           method: post
-          authorizer: aws_iam
           cors: true

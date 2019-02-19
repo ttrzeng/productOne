@@ -1,8 +1,7 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import fetch from 'isomorphic-unfetch';
-
-import { config } from '../../constants/config';
+import config from '../../constants/config';
 
 class CheckOutModal extends React.Component {
 
@@ -17,7 +16,7 @@ class CheckOutModal extends React.Component {
       body: JSON.stringify({
         token,
         charge: {
-          amount: 333,
+          amount: this.props.amount,
           currency: config.stripe.currency
         },
       }),
@@ -31,7 +30,7 @@ class CheckOutModal extends React.Component {
       <StripeCheckout
           name="productOne checkout"
           token={this.onToken}
-          amount={333}
+          amount={this.props.amount}
           currency={config.stripe.currency}
           stripeKey={config.stripe.apiKey}
           allowRememberMe={true} />
