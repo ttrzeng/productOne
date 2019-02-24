@@ -1,20 +1,16 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-module.exports.handler = (event, context, callback) => {
-
-  console.log('createCharge');
+module.exports = function(event, context, callback) {
 
   const requestBody = JSON.parse(event.body);
   const token = requestBody.token.id;
   const amount = requestBody.charge.amount;
   const currency = requestBody.charge.currency;
 
-  console.log(requestBody);
-
   return stripe.charges.create({ // Create Stripe charge with token
     amount,
     currency,
-    description: 'Serverless Stripe Test charge',
+    description: 'productOne Stripe charge',
     source: token,
   }).then((charge) => { // Success response
       console.log(charge);

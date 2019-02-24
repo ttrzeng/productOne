@@ -2,14 +2,19 @@
   "name": "productone",
   "version": "0.1.0",
   "private": true,
+  "main": "handler.js",
   "dependencies": {
-    "dotenv": "^6.2.0",
+    "@babel/runtime": "^7.3.1",
+    "babel-polyfill": "^6.23.0",
     "isomorphic-unfetch": "^3.0.0",
+    "lambda-tester": "^3.5.0",
+    "nock": "^10.0.6",
     "node-sass": "^4.11.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5",
-    "react-stripe-checkout": "^2.6.3"
+    "react-stripe-checkout": "^2.6.3",
+    "stripe": "^6.25.1"
   },
   "scripts": {
     "start": "react-scripts start",

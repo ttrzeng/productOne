@@ -21,6 +21,7 @@ class CheckOutModal extends React.Component {
         },
       }),
     });
+    console.log(res);
     const data = await res.json();
     console.log(data);
   }
