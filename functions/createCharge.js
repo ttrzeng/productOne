@@ -2,10 +2,9 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 module.exports = function(event, context, callback) {
 
-  const requestBody = JSON.parse(event.body);
-  const token = requestBody.token.id;
-  const amount = requestBody.charge.amount;
-  const currency = requestBody.charge.currency;
+  const token = event.token.id;
+  const amount = event.charge.amount;
+  const currency = event.charge.currency;
 
   return stripe.charges.create({ // Create Stripe charge with token
     amount,
@@ -15,16 +14,15 @@ module.exports = function(event, context, callback) {
   }).then((charge) => { // Success response
       const response = {
         statusCode: 200,
-        mode: "cors",
         source: token,
         headers: {
-          "Access-Control-Allow-Credentials": true,
-          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin": "*"
         },
         body: JSON.stringify({
           message: `Charge processed succesfully!`,
-          charge,
+          charge
         }),
       };
       callback(null, response);
@@ -33,9 +31,9 @@ module.exports = function(event, context, callback) {
       const response = {
         statusCode: 500,
         headers: {
-          "Access-Control-Allow-Credentials": true,
-          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin": "*"
         },
         body: JSON.stringify({
           error: err.message,

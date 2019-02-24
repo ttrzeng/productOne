@@ -11,7 +11,7 @@ class CheckOutModal extends React.Component {
   }
 
   async onToken(token) {
-    const res = await fetch(config.stripe.apiUrl, {
+    const response = await fetch(config.stripe.apiUrl, {
       method: 'POST',
       body: JSON.stringify({
         token,
@@ -21,8 +21,7 @@ class CheckOutModal extends React.Component {
         },
       }),
     });
-    console.log(res);
-    const data = await res.json();
+    const data = await response.json();
     console.log(data);
   }
 

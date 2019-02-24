@@ -103,7 +103,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/productOne-backend/dev/1550976969865-2019-02-24T02:56:09.865Z/productOne-backend.zip"
+          "S3Key": "serverless/productOne-backend/dev/1550981875039-2019-02-24T04:17:55.039Z/productOne-backend.zip"
         },
         "FunctionName": "productOne-backend-dev-createCharge",
         "Handler": "handler.createCharge",
@@ -127,14 +127,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "CreateChargeLambdaVersionpW3XqLHb4dJJbeJQa2JACHneil69HS6bj8ZEfh4vTA": {
+    "CreateChargeLambdaVersionfgk88GY7dzPBxWZaHYZ6EUEyDXQiezrd7SKU1vBfjk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateChargeLambdaFunction"
         },
-        "CodeSha256": "1VIhHn7UakCNBkPKwCFH+PFN6R1TNUNIQeeHR/gZ7+0="
+        "CodeSha256": "uTWBVjLXs9vKe8K00rMkrfAWlo8EozovYyp4l82AvX4="
       }
     },
     "ApiGatewayRestApi": {
@@ -253,7 +253,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1550976970802": {
+    "ApiGatewayDeployment1550981877067": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -323,7 +323,7 @@
     "CreateChargeLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateChargeLambdaVersionpW3XqLHb4dJJbeJQa2JACHneil69HS6bj8ZEfh4vTA"
+        "Ref": "CreateChargeLambdaVersionfgk88GY7dzPBxWZaHYZ6EUEyDXQiezrd7SKU1vBfjk"
       }
     },
     "ServiceEndpoint": {
