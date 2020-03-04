@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React One Page Web Store (no backend required)
 
-## Available Scripts
+The purpose of this project is to create one page web app store that doesn't require a backend.
+All it requires is a stripe API key and AWS API Url in order to charge a user when they purchase something from this web page.
 
-In the project directory, you can run:
+## Limitations
 
-### `npm start`
+This is a 100% front end web store. No backend is required for anyone to make credit card transaction.
+However, since this app has no backend, no data or traffic of anyone that visits this page will be recorded.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation and builds
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Run `npm install` to get all require packages
+Run `npm run build` to minify or deployment
 
-### `npm test`
+Add whatever package or library to build your own front end web store
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Happy building your store :D
 
-### `npm run build`
+## API keys and endpoints
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the constants folder, there is a config file for you to customize and change your API key and settings.
+You will need to hook the endpoints of your AWS and stripe API keys to that file.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Note: For security purposes, please put all your private keys and endpoint in a .env file to hide private links.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Checkout Component
 
-### `npm run eject`
+In order to bring up the Stripe modal button for users to insert their credit card information, import the CheckOutModal module to the component where you wish to charge a user.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+To see an example on how it works, look at app.js where the checkout module is injected below the header.
