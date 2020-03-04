@@ -11,7 +11,7 @@ However, since this app has no backend, no data or traffic of anyone that visits
 ## Installation and builds
 
 Run `npm install` to get all require packages
-Run `npm run build` to minify or deployment
+Run `npm run build` to minify for deployment
 
 Add whatever package or library to build your own front end web store
 
